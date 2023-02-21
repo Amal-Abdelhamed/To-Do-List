@@ -122,7 +122,6 @@ body {
   }
   .num-completed-items{
     background-color: #c94c3a;
-    cursor: pointer;
     border: 1px solid #f3b8ae;
     box-shadow: rgb(0 0 0 / 20%) 2px 2px 5px;
     border-radius: 5px;

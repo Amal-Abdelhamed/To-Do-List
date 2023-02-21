@@ -151,7 +151,7 @@ function addFooter() {
         numAll.appendChild(document.createTextNode("you have " + numTasks +" tasks"));
         let numCompleted = document.createElement("div");
         numCompleted.className = "num-completed-items";
-        numCompleted.appendChild(document.createTextNode("clear completed items"));
+        numCompleted.appendChild(document.createTextNode(numDone+" tasks are done"));
         footer.appendChild(numAll);
         footer.appendChild(numCompleted);
         container.appendChild(footer)
