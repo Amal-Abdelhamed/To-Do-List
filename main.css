@@ -1,5 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #dddddd;
   }
   .container {
     width: 500px;
@@ -131,4 +132,20 @@ body {
   }
 .none {
   display: none;
+}
+header {
+  width: 440px;
+  margin: 0 auto 10px;
+  padding: 10px 0;
+  background-color: #fff;
+  border: 2px solid #aaa;
+  border-radius: 5px;
+}
+header h1 {
+  text-align: center;
+  padding: 5px 0;
+  margin: 0;
+  font-size: 54px;
+  color: #333;
+  letter-spacing: -1px;
 }
