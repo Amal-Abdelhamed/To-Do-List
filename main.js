@@ -2,8 +2,8 @@ let input = document.querySelector(".input");
 let submit = document.querySelector(".add");
 let tasksDiv = document.querySelector(".tasks");
 let container = document.querySelector(".container");
-let numTasks = 0;
-let numDone = 0;
+var numTasks = 0;
+var numDone = 0;
 
 
 // empty array to store tasks 
@@ -100,12 +100,13 @@ function addElementsToPageFrom(arrayOfTasks) {
         tasksDiv.appendChild(div)
 
     });
+    numTasks = arrayOfTasks.length;
     if (arrayOfTasks.length && !document.querySelector(".tasks-details")) {
         addFooter();
     }
-    numTasks = arrayOfTasks.length
+    
 };
-console.log(numTasks);
+
 //add tasks to local storage
 function addDataToLocalStorageFrom(arrayOfTasks) {
     window.localStorage.setItem("tasks", JSON.stringify(arrayOfTasks))
@@ -124,7 +125,6 @@ function deleteTaskWith(taskId) {
     arrayOfTasks = arrayOfTasks.filter((task) => task.id != taskId);
     addDataToLocalStorageFrom(arrayOfTasks);
     if (!arrayOfTasks.length && document.querySelector(".tasks-details")) {
-        // console.log(document.querySelector(".tasks-details"));
         document.querySelector(".tasks-details").className = "none";
     }
 
@@ -139,7 +139,6 @@ function toggleStatusTaskWith(taskId) {
     addDataToLocalStorageFrom(arrayOfTasks);
 
 }
-
 function addFooter() {
     // check if array empty or not
     if (tasksDiv.innerHTML !== "") {
